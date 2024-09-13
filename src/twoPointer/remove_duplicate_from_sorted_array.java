@@ -1,5 +1,7 @@
 package twoPointer;
 
+//asked by facebook microsoft leetcode 26
+
 public class remove_duplicate_from_sorted_array {
     public static void main(String[] args) {
         int[] nums={0,0,1,1,1,2,2,3,3,4};

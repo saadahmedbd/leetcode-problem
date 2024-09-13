@@ -1,5 +1,5 @@
 package twoPointer;
-
+//asked by facebook
 public class sort_color {
     public static void main(String[] args) {
         int [] nums={2, 0, 2, 1, 1,0};
@@ -17,7 +17,7 @@ public class sort_color {
                 nums[mid]=nums[left];
                 nums[left] =temp;
                 nums[mid]=nums[right];
-                right++;
+                left++;
                 mid++;
             } else if (mid==2) {
                 int temp=nums[mid];

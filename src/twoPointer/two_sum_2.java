@@ -3,13 +3,12 @@ package twoPointer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+//asked by amazon leetcode 167
 public class two_sum_2 {
     public static void main(String[] args) {
         int[] nums={2, 7, 11, 15};
         int target=9;
         System.out.println(twosum2(nums, target));
-        System.out.println(twoSum2(nums, target));
 
     }
     public static int[] twosum2(int[] nums, int target){
@@ -24,20 +23,7 @@ public class two_sum_2 {
         }
         return new int[]{};
     }
-    public static int[] twoSum2(int [] nums, int target){
-        List<Integer> list =new ArrayList<>();
-        int left =0;
-        for(int rigth =1;rigth<nums.length;rigth++){
-            int sum =nums[left]+nums[rigth];
-            if(sum ==target){
-                list.add(left+1, rigth+1);
-                break;
-            }
-            left++;
-        }
-        return null;
 
 
-    }
 
 }
