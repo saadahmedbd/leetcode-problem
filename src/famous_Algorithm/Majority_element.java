@@ -9,6 +9,7 @@ public class Majority_element {
         int [] nums ={2,2,3};
         System.out.println(majorityElement2(nums));
        // System.out.println(majorityElement(nums));
+        System.out.println(majorityElement3(nums));
 
     }
     //this solution only passed 31 out of 50
@@ -49,5 +50,23 @@ public class Majority_element {
             }
         }
         return 0;
+    }
+    public static int majorityElement3(int nums[]){
+
+        //boyer-moore-voting algorithms
+        //tc 0(n) sc(1)
+        //asked by amazon
+        int count =0, majorityElement =0;
+        for(int i=0;i<=nums.length-1;i++){
+            if (count == 0){
+                majorityElement =nums[i];
+            } if(majorityElement ==nums[i]){
+                count ++;
+            }else{
+                count --;
+            }
+        }
+        return majorityElement;
+
     }
 }
