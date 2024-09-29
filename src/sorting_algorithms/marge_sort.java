@@ -2,7 +2,7 @@ package sorting_algorithms;
 
 public class marge_sort {
     public static void main(String[] args) {
-        int [] nums ={2, 4, 6, 7, 8};
+        int [] nums ={10,6,7,2,8,1};
         System.out.println(sortArray(nums));
 
     }
@@ -34,7 +34,7 @@ public class marge_sort {
         //left -> mid > A mid+1 ->right > B, nums[left -> right]
         // marged two sorted array
         int i =0, j =0, k=left;
-        while(i<n1 && j<n2){
+         while(i<n1 && j<n2){
             if(A[i]<= B[j]){
                 nums[k++] =A[i++];
             }else {
