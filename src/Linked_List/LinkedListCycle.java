@@ -170,6 +170,43 @@ public class LinkedListCycle{
         return head;
 
     }
+    //reverse linked list
+    public Node reverseLinkedList(Node head){
+
+            if(head ==null || head.next==null){
+                return head;
+            }
+
+            Node prev =null;
+            Node curr =head;
+            while (curr != null){
+                Node temp =curr.next;
+                curr.next=prev; //curr point to prev
+                prev=curr;
+                curr=temp;
+            }
+            return prev;
+    }
+
+    //merge two sorted array
+    public Node mergeTwoSortedList(Node list1, Node list2){
+            Node dummyNode=new Node(-1);
+            Node p1=list1, p2=list2, curr =dummyNode;
+            while (p1 != null && p2 != null){
+                if(p1.data <p2.data){
+                    curr.next=p1;
+                    curr=curr.next;
+                    p1=p1.next;
+                }else{
+                    curr.next=p2;
+                    curr.next=curr;
+                    p2=p2.next;
+                }
+            }
+            if(p1 ==null) curr.next=p2;
+            if(p2==null) curr.next=p1;
+            return dummyNode.next;
+    }
 
 
 
