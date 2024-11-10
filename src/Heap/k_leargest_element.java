@@ -11,13 +11,13 @@ public class k_leargest_element {
 
     }
     public static int klargestNumber(int[] nums, int k) {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int i = 0; i < nums.length; i++) {
-            maxHeap.add(nums[i]);
-            if (maxHeap.size() > k) {
-                maxHeap.poll();
+            minHeap.add(nums[i]);
+            if (minHeap.size() > k) {
+                minHeap.poll();
             }
         }
-        return maxHeap.peek();
+        return minHeap.peek();
     }
 }
