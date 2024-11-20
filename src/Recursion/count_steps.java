@@ -1,4 +1,4 @@
-package Recursion.level_one_question;
+package Recursion;
 
 //The Question
 //Given the function step(n), what is the minimum number of steps required to reduce

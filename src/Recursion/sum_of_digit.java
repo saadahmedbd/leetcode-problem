@@ -1,4 +1,4 @@
-package Recursion.level_one_question;
+package Recursion;
 
 public class sum_of_digit {
     public static void main(String[] args) {

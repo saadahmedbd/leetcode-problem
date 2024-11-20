@@ -1,4 +1,4 @@
-package Recursion.level_one_question;
+package Recursion;
 
 public class reverse_number {
     public static void main(String[] args) {

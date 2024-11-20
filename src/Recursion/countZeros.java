@@ -1,4 +1,8 @@
-package Recursion.level_one_question;
+package Recursion;
+
+//The Question
+//Given the function countZeros(n), how many zeros are present in the given integer n
+
 
 public class countZeros {
     public static void main(String[] args) {
