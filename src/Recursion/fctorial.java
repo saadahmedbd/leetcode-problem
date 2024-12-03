@@ -7,6 +7,7 @@ public class fctorial {
         System.out.println(Factorial_recursion(n));
         factorial(5,1);
         System.out.println("factorail:"+calFactorial(5));
+        System.out.println(fibo(6));
     }
     public static int Factorial(int n){
         if(n==0) return 1;
@@ -39,7 +40,12 @@ public class fctorial {
         int fact =fact_n * n;
         return fact;
     }
-
+    public static int  fibo(int n){
+        if (n ==0 || n==1){
+            return n;
+        }
+        return fibo(n-1)+fibo(n-2);
+    }
 
 
 
