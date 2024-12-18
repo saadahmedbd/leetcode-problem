@@ -7,53 +7,52 @@ public class count_occurences_of_anagram {
     String str="aababacbaa";
     String ptn="aab";
     int k=3;
-    System.out.println(count_anagram(str,ptn));
+    System.out.println(count_anagram(str,ptn, k));
 
     }
-    public static int count_anagram(String str, String ptn){
+    public static int count_anagram(String str, String ptn,int k){
         HashMap<Character, Integer> map =new HashMap<>();
-        int count=0;
         int sum=0;
-        int k=str.length();
-        for(int i=0;i<ptn.length();i++){
-            char ch =ptn.charAt(i);
-            if(map.containsKey(ch)){
-                int a=map.get(ch);
-                map.put(ch,++a);
-            }
-        }
-        count=map.size();
-        int i=0, j=0;
-        while(j<str.length()){
-            char ch =str.charAt(j);
-            if(map.containsKey(ch)){
-                int a=map.get(ch);
-                map.put(ch, --a);
-                if(a == 0){
-                    count --;
-                }
-            }
-            if(j-i+1 <k){
-                j++;
-                continue;
-            }
-            if(j-i+i == k){
-                if(count == 0){
-                    sum ++;
-                }
-                if(map.containsKey(str.charAt(i))){
-                    int a=map.get(str.charAt(i));
-                    if(a == 0){
-                        count ++;
-                    }
-                    map.put(str.charAt(i), ++a);
-                }
-            }
-            i++;
-            j++;
+       for(int i=0;i<ptn.length();i++){
+           char ch =ptn.charAt(i);
+           if(map.containsKey(ch)){
+               map.put(ch, map.get(ch)+1);
+           }else{
+               map.put(ch,1);
+           }
+       }
+       int l=0,r=0;
+       int count=map.size();
+       while(r<str.length()){
+           char ch = str.charAt(r);
+           if(map.containsKey(ch)){
+               map.put(ch, map.get(ch)-1);
+               if(map.get(ch) == 0){
+                   count--;
+               }
 
-        }
-        return sum;
+           }
+           else if(r-l+1 <k){
+               r++;
+           }
+           if(r-l+1 == k){
+               if(count == 0){
+                   sum++;
+               }
+               char ch2= str.charAt(r);
+               if(map.containsKey(ch2)){
+                   map.put(ch2, map.get(ch2)+1);
+                   if(map.get(ch2) ==1){
+                       count++;
+                   }
+
+               }
+               r++;
+               l++;
+           }
+
+       }
+       return sum;
 
     }
 }
