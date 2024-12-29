@@ -24,7 +24,7 @@ public class maximum_point_you_can_obtains_from_the_card {
             ans += nums[i];
         }
         int sum =ans;
-        for(int i=k-1;i>=0;i--){
+        for(int i=0;i<=k-1;i--){
             sum -= nums[i];
             sum += nums[nums.length-k+i];
             ans=Math.max(ans, sum);

@@ -1,6 +1,7 @@
 package subarray_question;
 
 import java.util.HashMap;
+//992. Subarrays with K Different Integers
 
 public class find_k_different_integer {
     public static void main(String[] args) {

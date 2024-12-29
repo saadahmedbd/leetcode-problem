@@ -2,7 +2,7 @@ package subarray_question;
 
 public class product_subarray {
     public static void main(String[] args) {
-        int[] nums={2, 3};
+        int[] nums={2,3,1,5,6,-1,3,2};
         System.out.println(maximum_product_subarray(nums));
     }
     // observation solution

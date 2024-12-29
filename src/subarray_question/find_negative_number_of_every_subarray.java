@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class find_negative_number_of_every_subarray {
+//    find second negative number
     public static void main(String[] args) {
         int nums[]={2, 3, -1, 4, -2, 6, 3};
         int k=3;
