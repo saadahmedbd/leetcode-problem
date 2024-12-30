@@ -1,7 +1,4 @@
-package subarray_question;
-
-import java.util.ArrayList;
-import java.util.List;
+package fixed_size_subarray_question;
 
 public class slinding_window_max {
     public static void main(String[] args) {

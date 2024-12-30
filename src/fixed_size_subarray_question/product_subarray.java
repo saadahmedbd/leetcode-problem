@@ -1,4 +1,4 @@
-package subarray_question;
+package fixed_size_subarray_question;
 
 public class product_subarray {
     public static void main(String[] args) {

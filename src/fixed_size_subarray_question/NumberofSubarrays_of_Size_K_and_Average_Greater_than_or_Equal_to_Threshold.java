@@ -1,4 +1,4 @@
-package subarray_question;
+package fixed_size_subarray_question;
 
 public class NumberofSubarrays_of_Size_K_and_Average_Greater_than_or_Equal_to_Threshold {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package subarray_question;
+package fixed_size_subarray_question;
 
 import java.util.HashMap;
 //992. Subarrays with K Different Integers

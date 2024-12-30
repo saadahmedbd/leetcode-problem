@@ -1,8 +1,4 @@
-package subarray_question;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
+package fixed_size_subarray_question;
 
 public class slinding_subarray_beauty {
     public static void main(String[] args) {
