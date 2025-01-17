@@ -3,8 +3,8 @@ package Recursion;
 public class fibonacci {
 
     public static void main(String[] args) {
-        int m=4;
-       // System.out.println(fibonacci(n));
+        int m=5;
+//        System.out.println(fibonacci(m));
         int a=0, b=1;
         int n=7;
         System.out.println(a);
