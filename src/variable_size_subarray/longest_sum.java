@@ -2,9 +2,9 @@ package variable_size_subarray;
 
 public class longest_sum {
     public static void main(String[] args) {
-        int nums[]={4,1,1,1,2,3};
-        int k=5;
-        System.out.println(find_longest_sum(nums,k));
+        int nums[]={0,7, 3, 8, 6};
+        int k=10;
+       System.out.println(find_longest_sum(nums,k));
         System.out.println(longestSUm(nums,k));
     }
     public static int find_longest_sum(int nums[], int k){
@@ -40,8 +40,9 @@ public class longest_sum {
                         ans=Math.max(r-l+1, ans);
                     }
                 }
+                r++;
             }
-            r++;
+
         }
         return ans;
 
