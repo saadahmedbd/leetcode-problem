@@ -7,6 +7,7 @@ public class rearrange_element_by_sign {
     int nums[]={1,2,-3,-1,-2,3};
         System.out.println(rearrange(nums));
     }
+//    tc 0(n) sc 0(n) leetcode problem
     public static int[] rearrange(int nums[]){
         int n=nums.length;
        int [] newNum=new int[n];

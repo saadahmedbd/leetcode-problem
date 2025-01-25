@@ -17,7 +17,9 @@ public class next_permutation {
             while (nums[j]<=nums[i]) j--;
             swap(nums, i, j);
         }
+
         reverse(nums, i+1, nums.length-1);
+
     }
     public static void swap(int [] nums, int i, int j){
         int temp =nums[i];
