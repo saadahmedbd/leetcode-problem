@@ -10,7 +10,7 @@ public class kadens_algorthims_max_sum {
         int maxSum =nums[0];
         int current_sum=0;
         for(int i=0;i<nums.length;i++){
-            current_sum=Math.max(nums[i], current_sum+nums[i]);
+            current_sum=Math.max(nums[i], current_sum+nums[i]); // if current_sum+nums[i] is less than num[i] then num[i] will be current_sum
             maxSum=Math.max(current_sum, maxSum);
         }
         return maxSum;

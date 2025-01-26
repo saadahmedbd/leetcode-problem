@@ -10,12 +10,12 @@ public class buy_sell {
         int sum=0;
         int maxsum=0;
         for(int r=1;r<nums.length;r++){
-            if(nums[l]<nums[r]){
-                sum=nums[r]-nums[l];
+            if(nums[l]<nums[r]){ //
+                sum=nums[r]-nums[l]; //if r is gather than l then a sum will be updated
                 maxsum=Math.max(sum, maxsum);
 
             }else{
-                l=r;
+                l=r; // if r is less than l then l will update to r
             }
         }
         return maxsum;

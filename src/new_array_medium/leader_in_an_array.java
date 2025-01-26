@@ -11,6 +11,7 @@ public class leader_in_an_array {
         System.out.println(leader(nums));
     }
     public static List<Integer> leaderArray(int[] nums){
+//        brutch force approach
         List<Integer> ans=new ArrayList<>();
         int n= nums.length;
         for(int r=0;r<n;r++){
@@ -30,6 +31,7 @@ public class leader_in_an_array {
         return ans;
     }
     public static List<Integer> leader(int nums[]){
+//        optimal approach
         int max=Integer.MIN_VALUE;
         List<Integer> ans= new ArrayList<>();
         for(int r= nums.length-1;r>0;r--){

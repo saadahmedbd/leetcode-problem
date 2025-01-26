@@ -6,6 +6,7 @@ public class Maximum_Score_from_Subarray_Minimums {
         System.out.println(maximum_Score_from_Subarray_Minimums(arr));
     }
     public static int maximum_Score_from_Subarray_Minimums(int [] arr){
+//        greeksforgeek question similar to kaden's algorithms
         int maxsum=0;
         int sum=0;
         int l=0;

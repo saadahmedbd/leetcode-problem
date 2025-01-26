@@ -5,6 +5,11 @@ public class next_permutation {
         int nums[]={1,3,2};
         nextPermutation(nums);
     }
+//    sotion approche
+//    1. find breaking point
+//    2. find the smallest amount of breaking point value from the right side
+//    if you find thrn swap breaking number to the smallest number
+//    3. then reverse the entire right side of an array
     public static void nextPermutation(int[] nums){
         int index=-1, index2=-1;
         int n=nums.length;
