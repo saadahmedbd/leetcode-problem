@@ -4,7 +4,7 @@ import java.util.*;
 
 public class three_sum {
     public static void main(String[] args) {
-        int nums[]={-1,0,1,2,-1,-4};
+        int nums[]={1,-1,-1,0};
         System.out.println(sum_of_three(nums));
         System.out.println(threeSum(nums));
         System.out.println(optimalThreeSum(nums));
