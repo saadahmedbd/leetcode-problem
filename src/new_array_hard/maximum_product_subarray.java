@@ -14,7 +14,9 @@ public class maximum_product_subarray {
            if(suffix==0) suffix=1;
            prefix *= nums[i];
            suffix *=nums[nums.length -i-1];
-           ans =Math.max(prefix, suffix);
+
+           int product=Math.max(prefix, suffix);
+           ans =Math.max(product, ans);
        }
        return ans;
 
