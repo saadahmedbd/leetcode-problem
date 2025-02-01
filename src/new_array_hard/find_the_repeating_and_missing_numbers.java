@@ -9,6 +9,7 @@ public class find_the_repeating_and_missing_numbers {
     public static void main(String[] args) {
         int [] nums={3,1,2,5,4,6,7,5};
         System.out.println(repeating_missing_number(nums));
+        System.out.println(missing_repeating(nums));
     }
     public static int []repeating_missing_number(int nums[]){
         int missing =-1;
@@ -33,6 +34,34 @@ public class find_the_repeating_and_missing_numbers {
         return ans;
 
 
+
+    }
+//    better approach
+    // tc 0(n) sc 0(n)
+    public static List<Integer> missing_repeating(int [] nums){
+        List<Integer> ans =new ArrayList<>();
+        // code here
+
+        int n=nums.length;
+        int [] hash =new int [n+1];// hash store occurrence of number default [0 n time]
+        for(int i=0;i<n;i++){
+            hash[nums[i]]++;
+        }
+        int repeating =-1;
+        int missing =-1;
+        for(int i=1;i<=n;i++){
+            if(hash[i] == 0){
+                missing =i; // if hash[i] is have o occurrence index than missing index we will find
+            }else if (hash[i] == 2){
+                repeating =i; // or we found repeating index
+            }
+            if(repeating != -1 && missing != -1){
+                break;
+            }
+        }
+        ans.add(repeating);
+        ans.add(missing);
+        return ans;
 
     }
 }

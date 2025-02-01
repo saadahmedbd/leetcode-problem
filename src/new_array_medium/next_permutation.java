@@ -2,7 +2,7 @@ package new_array_medium;
 
 public class next_permutation {
     public static void main(String[] args) {
-        int nums[]={1,3,2};
+        int nums[]={3,2,1};
         nextPermutation(nums);
     }
 //    sotion approche
