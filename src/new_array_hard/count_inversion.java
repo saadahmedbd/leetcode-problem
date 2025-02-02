@@ -23,6 +23,7 @@ public class count_inversion {
         }
         return count;
     }
+//    optimal approach
     public static int merge(int nums[], int low, int mid, int high){
         List<Integer> temp =new ArrayList<>();
         int left =low, right =mid+1;
@@ -33,7 +34,7 @@ public class count_inversion {
                 left++;
             }else{
                 temp.add(nums[right]);
-                count += (mid -left +1);
+                count += (mid -left +1); //modification one
                 right++;
             }
         }
@@ -56,7 +57,7 @@ public class count_inversion {
         int mid =(high+low)/2;
         count += mergeSort(nums, low, mid);
         count+= mergeSort(nums, mid+1, high);
-        count += merge(nums, low, mid, high);
+        count += merge(nums, low, mid, high); //modification two
         return count;
     }
     public static int team (int [] skill, int n){

@@ -32,7 +32,7 @@ public class count_reverse_pair {
     }
 
 
-
+// optimal approach
 
     public static void merger(int [] nums, int low, int mid, int high){
         List<Integer> temp =new ArrayList<>();

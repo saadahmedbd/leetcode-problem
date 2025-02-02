@@ -43,15 +43,15 @@ public class find_the_repeating_and_missing_numbers {
         // code here
 
         int n=nums.length;
-        int [] hash =new int [n+1];// hash store occurrence of number default [0 n time]
+        int [] hash =new int [n+1];// hash store occurrence of number default [0 n time] [0, 0, 0, 0, 0, 0, 0,0]
         for(int i=0;i<n;i++){
-            hash[nums[i]]++;
+            hash[nums[i]]++; // if number is find this array then default hash increase by one
         }
         int repeating =-1;
         int missing =-1;
         for(int i=1;i<=n;i++){
             if(hash[i] == 0){
-                missing =i; // if hash[i] is have o occurrence index than missing index we will find
+                missing =i; // if hash[i] is had o occurrence index than missing index we will find
             }else if (hash[i] == 2){
                 repeating =i; // or we found repeating index
             }
