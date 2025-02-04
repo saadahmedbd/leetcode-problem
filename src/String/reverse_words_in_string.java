@@ -12,7 +12,7 @@ public class reverse_words_in_string {
     }
     public static  String reverseWord(String s){
         // part 1 : reverse entire string
-        // make string to character array
+        // make string to a character array
         char[] str =s.toCharArray();
         reverse(str, 0, str.length-1);
         //part2 reverse ease word

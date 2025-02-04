@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class valid_anagram {
     public static void main(String[] args) {
-        String s="anagaam";
+        String s="anagam";
         String t ="nagaram";
         System.out.println(anagram(s,t));
         System.out.println(Anagram(s, t));

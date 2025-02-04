@@ -10,7 +10,7 @@ import java.util.HashMap;
 //Output: 3
 public class longest_substring_without_repeating_char {
     public static void main(String[] args) {
-        String s="abba";
+        String s="abcbba";
         System.out.println(longest_substring(s));
     }
     public static int longest_substring(String s){
