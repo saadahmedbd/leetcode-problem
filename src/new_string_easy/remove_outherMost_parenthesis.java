@@ -2,28 +2,24 @@ package new_string_easy;
 
 public class remove_outherMost_parenthesis {
     public static void main(String[] args) {
-        String s="()()";
+        String s="(())(())";
         System.out.println(removeParenthesis(s));
     }
     public static String removeParenthesis(String s){
-        StringBuilder sb =new StringBuilder(s);
-        int l=0;
-        int r=0;
-        while (r<sb.length()){
-            if(sb.charAt(l) == sb.charAt(r) && l == r){
-                r++;
+        StringBuilder sb =new StringBuilder();
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i) == ')'){
+                count--;
             }
-            else if(sb.charAt(r) == ')' && sb.charAt(r-1) == '('){
-                r++;
-            }else if(sb.charAt(l) == '(' && sb.charAt(r) == ')') {
-                sb.deleteCharAt(l);
-                sb.deleteCharAt(r-1);
-                l=r;
-            }else if(sb.charAt(l) == '(' && sb.charAt(r) == '('){
-                r++;
+            if(count != 0){
+                sb.append(s.charAt(i));
+            }
+            if(s.charAt(i) == '('){
+                count ++;
             }
         }
-        String newString =sb.toString();
-        return newString;
+        return sb.toString();
+
     }
 }
