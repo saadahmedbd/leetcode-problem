@@ -1,4 +1,4 @@
-package new_string_easy;
+package new_string_medium;
 
 public class reverse_word_in_string {
     public static void main(String[] args) {
