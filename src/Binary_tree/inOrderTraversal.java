@@ -31,7 +31,7 @@ public class inOrderTraversal {
                     curr=curr.left;
                 }
                 curr=stack.pop();
-                stack.push(curr);
+                list.add(curr.val);
                 curr=curr.right;
             }
 

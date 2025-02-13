@@ -26,9 +26,7 @@ public class preOrder {
             curr =stack.pop();
             while(stack.isEmpty()){
                 list.add(curr.data);
-                if(curr.right != null)
-                    stack.push(curr.right);
-
+                if(curr.right != null) stack.push(curr.right);
                 curr =curr.left;
 
             }

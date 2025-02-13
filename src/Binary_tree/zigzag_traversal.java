@@ -39,6 +39,7 @@ public class zigzag_traversal {
                     if(curr.right != null) queue.add(curr.right);
                     size--;
                 }
+                level++;
                 ans.add(list);
             }
             return ans;
