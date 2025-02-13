@@ -1,5 +1,6 @@
 package new_string_easy;
 
+import java.util.HashMap;
 import java.util.SortedMap;
 import java.util.StringJoiner;
 
@@ -123,10 +124,55 @@ public class string_concept {
         joiner.add("Java").add("Python").add("C++");
         System.out.println(joiner); // [Java, Python, C++]
 
+        String s="pwwkew";
+        System.out.println(longestPalindrome(s));
+        System.out.println(longest_substring(s));
+
 
 
 
     }
+    static int start =0;
+    static  int end =0;
+    public static  String longestPalindrome(String s){
+        for(int i=0;i<s.length();i++){
+            expandAroundCenter(s,i, i);
+            expandAroundCenter(s, i, i+1);
+
+        }
+        return s.substring(start, end+1);
+
+    }
+    public static void expandAroundCenter(String s, int left , int right){
+        while(left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)){
+            left --;
+            right++;
+        }
+        left =left +1;
+        right =right-1;
+        if(right -left +1 > end -start +1){
+            start=left;
+            end =right;
+        }
+    }
+    public static int longest_substring(String s){
+        int left =0;
+        
+        int ans=0;
+        HashMap<Character, Integer> map =new HashMap<>();
+        for(int right=0;right<s.length();right++){
+            if(!map.containsKey(s.charAt(right))){
+                map.put(s.charAt(right), right);
+            }else{
+                left =Math.max(left, map.get(s.charAt(right))+1);
+                map.put(s.charAt(right), right);
+
+            }
+            ans =Math.max(ans, right-left+1);
+        }
+        return ans;
+
+         }
 }
 //theory
 //java string are immutable means once you create string you can't be changed

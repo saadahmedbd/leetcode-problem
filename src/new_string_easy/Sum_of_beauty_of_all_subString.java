@@ -1,4 +1,4 @@
-package new_string_medium;
+package new_string_easy;
 
 import java.util.Collections;
 import java.util.HashMap;
