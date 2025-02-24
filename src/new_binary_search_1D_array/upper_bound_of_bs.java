@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class upper_bound_of_bs {
     public static void main(String[] args) {
-        int [] arr ={1,2,2,3};
-        int k=2;
+        int [] arr ={3,5,8,9,15,19};
+        int k=9;
         System.out.println(ceil_of_target(arr, k));
     }
     public static int ceil_of_target(int arr[], int k){
