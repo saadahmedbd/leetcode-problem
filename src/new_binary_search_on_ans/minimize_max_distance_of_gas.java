@@ -2,8 +2,8 @@ package new_binary_search_on_ans;
 
 public class minimize_max_distance_of_gas {
     public static void main(String[] args) {
-        int nums [] ={1,2,3,4,5};
-        int k=4;
+        int nums [] ={1,10,14,19,22};
+        int k=5;
         System.out.println(minimizeMaxDistance(nums, k));
     }
 //    optimal approach binary search

@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class longest_valid_parenteses {
     public static void main(String[] args) {
-        String s="(())()";
+        String s="(())()(";
         System.out.println(longestValidParenteses(s));
 
     }
