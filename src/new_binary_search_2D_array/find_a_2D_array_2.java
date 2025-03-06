@@ -17,6 +17,7 @@ public class find_a_2D_array_2 {
 
 
     }
+//    same solution find target in 2d array
     public static boolean findMetrix2(int [][] matrix, int target) {
         int n= matrix.length; //size of matrix
         int m= matrix[0].length; //size first row
