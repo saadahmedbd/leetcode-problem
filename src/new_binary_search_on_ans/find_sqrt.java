@@ -2,7 +2,7 @@ package new_binary_search_on_ans;
 
 public class find_sqrt {
     public static void main(String[] args) {
-        int num =50;
+        int num =2147395599;
         System.out.println(sqrt(num));
         System.out.println(binarySearchSqrt(num));
     }
@@ -17,10 +17,10 @@ public class find_sqrt {
         int ans =1;
         while (start <= end){
             int mid =(start+end)/2;
-            if(mid * mid <= num){
+            if( (long) mid * mid <= (long)num){
                 ans =mid;
                 start=mid+1;
-            }else if(mid * mid  > num){
+            }else{
                 end =mid-1;
             }
 
