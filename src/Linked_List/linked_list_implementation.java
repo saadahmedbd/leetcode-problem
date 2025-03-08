@@ -42,7 +42,7 @@ public class linked_list_implementation {
         }
         Node currnode =head;
         while (currnode != null){
-            System.out.println(currnode.data+" ->");
+            System.out.print(currnode.data+" ->");
             currnode =currnode.next;
         }
         System.out.println("null");
@@ -67,9 +67,9 @@ public class linked_list_implementation {
         }
         Node secondLastNode =head;
         Node lastNode =head.next;
-        while (lastNode != null){
-            lastNode =lastNode.next;
-            secondLastNode=secondLastNode.next;
+        while (lastNode.next != null){
+            secondLastNode=lastNode;
+            lastNode=lastNode.next;
         }
         secondLastNode.next=null;
     }
@@ -77,8 +77,8 @@ public class linked_list_implementation {
         linked_list_implementation list =new linked_list_implementation();
         list.addfirst(3);
         list.addlast(9);
+        list.addlast(10);
         list.printNode();
-        list.deleteFirst();
         list.deleteLast();
         list.printNode();
     }
