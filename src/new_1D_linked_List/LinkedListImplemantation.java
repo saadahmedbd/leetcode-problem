@@ -76,6 +76,27 @@ class LinkedList{
         }
         secondNode.next=null; // Remove last node
     }
+//    reverseLinkedList
+    public Node reverse(){
+        if(head == null || head.next == null){
+           return head;
+        }
+        Node prevNode =head;
+        Node currNode =head.next;
+        while (currNode != null){
+            Node nextNode =currNode.next;
+            currNode.next=prevNode;
+
+            //        update node location
+            prevNode=currNode;
+            currNode=nextNode;
+        }
+        head.next=null; //we point to head in null
+        head=prevNode; // and prevNode(lastNode) to head;
+        return head;
+
+    }
+
 }
 
 public class LinkedListImplemantation {
@@ -85,9 +106,12 @@ public class LinkedListImplemantation {
         obj.addFirstNode(4);
         obj.addLastNode(5);
         obj.addLastNode(7);
+//        obj.printNode();
+//        obj.deleteLastNode();
+//        obj.deleteLastNode();
+//        obj.printNode();
+//        obj.reverse();
         obj.printNode();
-        obj.deleteLastNode();
-        obj.deleteLastNode();
         obj.printNode();
     }
 }
