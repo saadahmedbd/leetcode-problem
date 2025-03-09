@@ -96,6 +96,8 @@ class LinkedList{
         return head;
 
     }
+    //find middle node
+
 
 }
 
@@ -111,7 +113,8 @@ public class LinkedListImplemantation {
 //        obj.deleteLastNode();
 //        obj.printNode();
 //        obj.reverse();
-        obj.printNode();
+
+
         obj.printNode();
     }
 }
