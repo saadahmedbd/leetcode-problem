@@ -31,4 +31,22 @@ public class Intersection_Node {
         }
         return null;
     }
+    public  static LinkedLi intersec(LinkedLi headA, LinkedLi headB){
+        LinkedLi dummy1=headA;
+        LinkedLi dummy2=headB;
+        while (dummy1 != dummy2){
+            // dummy1=dummy1 == null ? headB : dummy1.next;
+            if(dummy1 == null){
+                dummy1=headB;
+            }else{
+                dummy1=dummy1.next;
+                // dummy2=dummy2 ==null ? headA : dummy2.next;
+            }if(dummy2== null){
+                dummy2=headA;
+            }else{
+                dummy2=dummy2.next;
+            }
+        }
+        return headA;
+    }
 }
