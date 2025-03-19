@@ -5,6 +5,7 @@ public class Minimum_Operations_to_Make_Binary_Array_Elements_Equal_to_One_I {
         int nums [] ={0,1,1,1};
         System.out.println(Minimum_operation(nums));
     }
+//    leetcode  3191. Minimum Operations to Make Binary Array Elements Equal to One I
     public static int Minimum_operation(int nums []){
         //tc 0(n) sc(1)
         int count=0;
