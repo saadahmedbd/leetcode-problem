@@ -5,6 +5,7 @@ public class pow_x_n {
         double x=2.00000;
         int n=10;
         System.out.println(pow(x,n));
+        System.out.println(poww(x, n));
     }
     public static double pow(double x, int n){
 
@@ -21,5 +22,17 @@ public class pow_x_n {
         return n<0 ?1/res :res; //for negative number
 
 
+    }
+    public static double poww(double x, int n){
+//        long number=Math.abs((long) n);
+        double res=1;
+        if(n == 0){
+            return n< 0 ? 1/res : res;
+        }
+        if(n % 2== 1){
+            poww(res *x, n-1);
+        }
+        poww(x*x,n/2);
+        return 0;
     }
 }
