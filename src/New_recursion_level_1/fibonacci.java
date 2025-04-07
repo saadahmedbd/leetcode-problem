@@ -5,6 +5,7 @@ public class fibonacci {
         int n=6;
         System.out.println(fibo(n));
     }
+    //multiple recursion call
     public static int fibo(int n){
         if(n<=1){
             return n;
