@@ -35,11 +35,17 @@ class ImpQueue{
 public class ImplemantStackUsingQueue {
     public static void main(String[] args) {
         ImpQueue ob =new ImpQueue();
-        ob.push(1);
+        ob.push(3);
         ob.push(2);
+        ob.push(4);
+        ob.push(5);
+
+        System.out.println(ob.pop());
+        ob.push(6);
+
 
         System.out.println(ob.peek());
-        System.out.println(ob.pop());
+
         System.out.println(ob.empty());
 
     }

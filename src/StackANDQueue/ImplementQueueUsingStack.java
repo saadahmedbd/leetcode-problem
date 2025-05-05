@@ -36,10 +36,14 @@ class ImpStack{
 public class ImplementQueueUsingStack {
     public static void main(String[] args) {
         ImpStack obj =new ImpStack();
-        obj.push(1);
+        obj.push(3);
         obj.push(2);
-        System.out.println(obj.top());
+        obj.push(4);
+        obj.push(5);
         System.out.println(obj.pop());
+        obj.push(6);
+        System.out.println(obj.top());
+
         System.out.println();
     }
 }
