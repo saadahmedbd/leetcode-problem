@@ -35,8 +35,8 @@ public class Number_of_connected_island {
     }
     public void dfs(int row,int col, int[][] vis, char [][] grid){
         vis[row][col]=1; //mark that visited
-        Queue<Pair> queue=new LinkedList<Pair>();
-        queue.add(new Pair(row,col)); //add row and col in queue
+        Queue<pair> queue=new LinkedList<pair>();
+        queue.add(new pair(row,col)); //add row and col in queue
         int n=grid.length;
         int m=grid[0].length;
 
@@ -52,7 +52,7 @@ public class Number_of_connected_island {
                     if(nRow >=0 && nRow < n && nCol >=0 && nCol < m
                             && grid[nRow][nCol]== '1' && vis[nRow][nCol] ==0){
                         vis[nRow][nCol]=1;
-                        queue.add(new Pair(nRow, nCol));
+                        queue.add(new pair(nRow, nCol));
                     }
                 }
             }
